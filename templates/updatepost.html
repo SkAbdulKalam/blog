@@ -1,0 +1,19 @@
+{% extends 'homepage.html' %}
+{% block content %}
+<form method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input value="{{post[1]}}" type="text" class="form-control" name="title" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Content</label>
+      <textarea name="content" rows="10">{{ post[2] }}</textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Slug</label>
+        <input value="{{post[4]}}" type="text" class="form-control" name="slug">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock %}
